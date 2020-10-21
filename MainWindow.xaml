@@ -57,17 +57,22 @@
         <Label x:Name="lblQuantity" Content="Quantity" HorizontalAlignment="Left" Height="28" Margin="126,272,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.213,0.751"/>
         <ListBox x:Name="istSale" HorizontalAlignment="Left" Height="67" Margin="126,315,0,0" VerticalAlignment="Top" Width="468"/>
         <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top"
-Width="130">
+Width="131" Margin="0,26,0,0">
             <MenuItem Header="File">
-                <MenuItem Header="Exit"/>
+                <MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
             </MenuItem>
             <MenuItem Header="Doughnuts">
-                <MenuItem Header="Make"/>
-                <MenuItem Header="Raised">
-                    <MenuItem x:Name="glazedMenuItem" Header="Glazed"/>
-                    <MenuItem x:Name="sugarMenuItem" Header="Sugar"/>
+                <MenuItem Header="Make">
+                    <MenuItem Header="Raised">
+                        <MenuItem x:Name="glazedToolStripMenuItem" Header="Glazed"
+Click="glazedToolStripMenuItem_Click" IsCheckable="True"/>
+                        <MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar"
+IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Filled"/>
                 </MenuItem>
-                <MenuItem Header="Filled"/>
+                <MenuItem x:Name="mnuStop" Header="Stop"
+Click="stopToolStripMenuItem_Click"/>
             </MenuItem>
         </Menu>
 
